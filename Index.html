@@ -6,13 +6,26 @@
 </head>
 <body>
     <script>
-        var number = prompt('Votre numéro');
-        if ( number % 2 == 0) {
-	    alert ('Le nombre est pair');
+        var number = prompt('Entrez un nombre');
+        // Si ce n'est pas un nombre
+        if (isNaN (number) == true) {
+            alert('Ceci n\'est pas un nombre');
+        }else {
+            var numberInt = parseInt (number);
+        // si le nombre saisi est un nombre entier
+        if (number == numberInt) {
+        // On récupère le reste de la division par 2
+            var rest = number % 2;
+        if ( rest == 0) { 
+            alert ('Le nombre est pair');
+        
+        }else {
+            alert ('Le nombre est impair');
         }
-        else {
-	    alert ('Le nombre est impair');
-        }    
+        }else {
+            alert('Les nombre à virgule ne sont pas acceptés'); 
+        }
+    }
 </script>
 </body>
 </html>
